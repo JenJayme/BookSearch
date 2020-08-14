@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Jumbotron from "./components/Jumbotron";
-import NavBar from "./components/Nav";
-import Books from "./pages/Books";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import Jumbotron from "./components/Jumbotron";
+import NavBar from "./components/navbar";
+import Saved from "./pages/Saved";
+import Search from "./pages/Search";
+
 
 
 
@@ -11,10 +13,10 @@ function App() {
     <Router>
       <div>
         <NavBar/>
-        <Jumbotron />
+        {/* <Jumbotron /> */}
         <Switch>
-          <Route exact path="/" component={Books}/>
-          <Route exact path="/saved" component={Books}/>
+          <Route exact path="/" component={Search}/>
+          <Route exact path="/saved" component={Saved}/>
         </Switch>
       </div>
     </Router>
