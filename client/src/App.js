@@ -1,19 +1,24 @@
 import React, { Component } from "react";
-import "./App.css";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Jumbotron from "./components/Jumbotron";
+import NavBar from "./components/Nav";
+import Books from "./pages/Books";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
+    <Router>
+      <div>
+        <NavBar/>
+        <Jumbotron />
+        <Switch>
+          <Route exact path="/" component={Books}/>
+          <Route exact path="/saved" component={Books}/>
+        </Switch>
       </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
-  );
+    </Router>
+  )
 }
-
 
 export default App;
