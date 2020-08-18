@@ -10,16 +10,17 @@ import Search from "./pages/Search";
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <div>
         <NavBar/>
         <Jumbotron />
-        <Switch>
+        {/* <Switch>
           <Route exact path="/" component={Search}/>
           <Route exact path="/saved" component={Saved}/>
-        </Switch>
+        </Switch> */}
+        <Saved />
       </div>
-    </Router>
+    // </Router>
   )
 }
 
