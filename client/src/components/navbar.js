@@ -8,7 +8,7 @@ function NavBar() {
     console.log("Engaging navbar component...");
     return (
 
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="green" expand="lg">
       <h3 href="#home">Google Books</h3>
         <Nav className="mr-auto">
           <Nav.Link href="/">Search</Nav.Link>
