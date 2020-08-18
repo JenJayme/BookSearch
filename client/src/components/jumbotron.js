@@ -6,6 +6,7 @@ function MyJumbotron() {
 
   return (
     <Jumbotron>
+      {/* <img src="./books.jpg" alt="wall of antique books"></img> */}
       <h1 className="text-center">React Google Search</h1>
       <h4 className="text-center"> Search for and Save Books of Interest.</h4>
     </Jumbotron>
