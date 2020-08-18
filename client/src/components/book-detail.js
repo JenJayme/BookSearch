@@ -2,14 +2,14 @@ import React from "react";
 import { Row, Col, Button } from 'react-bootstrap/'
 
 
-function BookDetail() {
+function BookDetail(props) {
 
     return (
         <div>
             <Col>
                 <Row>
-                    <Col className="left"><h3>Title</h3>
-                    <h5>Author</h5>
+                    <Col className="left"><h3>Title {props.title}</h3>
+                    <h5>Author {props.author}</h5>
                     </Col>
                     <Col md={{ span: 4, offset: 4 }}>
                         <Button className="mr-2">View</Button>
@@ -18,11 +18,11 @@ function BookDetail() {
                 </Row>
                 <Row>
                     <Col md={2}>
-                        <p>Image here</p>
+                        <p><img src={props.image}></img>Image</p>
                     </Col>
                     <Col md={10}>
                         <p>Description orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised </p>
-                        <p>LINK HERE</p>
+                        <p>LINK: {props.link}</p>
                     </Col>
                     
                 </Row>
