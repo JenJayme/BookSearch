@@ -6,7 +6,7 @@ import Results from '../components/results';
 export default function SavedPage() {
     return (
         <div>
-            {/* <h1>Saved Page</h1> */}
+            <h3>Saved Page</h3>
             <Results />
             {/* <p>Book Details here</p> */}
         </div>

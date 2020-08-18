@@ -9,10 +9,10 @@ function NavBar() {
     return (
 
     <Navbar bg="light" expand="lg">
-      <h1 href="#home">Navbar</h1>
+      <h3 href="#home">Google Books</h3>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Search</Nav.Link>
-          <Nav.Link href="#link">Saved</Nav.Link>
+          <Nav.Link href="/">Search</Nav.Link>
+          <Nav.Link href="/saved">Saved</Nav.Link>
         </Nav>
     </Navbar>
       

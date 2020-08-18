@@ -3,6 +3,7 @@ import { Row, Col, Button } from 'react-bootstrap/'
 
 
 function BookDetail() {
+
     return (
         <div>
             <Col>
@@ -11,7 +12,7 @@ function BookDetail() {
                     <h5>Author</h5>
                     </Col>
                     <Col md={{ span: 4, offset: 4 }}>
-                        <Button>View</Button>
+                        <Button className="mr-2">View</Button>
                         <Button>Delete</Button>
                     </Col>
                 </Row>
@@ -21,6 +22,7 @@ function BookDetail() {
                     </Col>
                     <Col md={10}>
                         <p>Description orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised </p>
+                        <p>LINK HERE</p>
                     </Col>
                     
                 </Row>
