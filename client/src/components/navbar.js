@@ -9,7 +9,7 @@ function NavBar() {
     return (
 
     <Navbar bg="light" expand="lg">
-      <h1 href="#home">React-Bootstrap</h1>
+      <h1 href="#home">Navbar</h1>
         <Nav className="mr-auto">
           <Nav.Link href="#home">Search</Nav.Link>
           <Nav.Link href="#link">Saved</Nav.Link>
