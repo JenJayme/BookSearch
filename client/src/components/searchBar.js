@@ -1,15 +1,16 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
+// import searchBooks from "../utils/API"
 
-// This file exports the Input, TextArea, and FormBtn components
+export default function SearchBar(props) {
 
-export function Input(props) {
+
   return (
     <div className="form-group">
         Search for a book...
-      <input className="form-control" {...props} />
-      <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-      {props.children}
-    </button>
+      <input className="form-control"   />
+      <Button {...props} className="btn btn-success">
+    </Button>
     </div>
   );
 }
