@@ -7,6 +7,6 @@ export default {
   },
   
   searchBooks: function(title){
-      return axios.get("https://www.googleapis.com/books/v1/books/volumes?q="+title);
+      return axios.get("https://www.googleapis.com/books/v1/volumes?q="+title);
   }
 }
