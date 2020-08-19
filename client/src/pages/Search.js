@@ -59,9 +59,10 @@ class Search extends React.Component {
                 {this.state.results.map((book)=>{ 
                     return<BookDetail
                         title = {book.volumeInfo.title}
-                        author = {book.author}
-                        image = {book.image}
-                        link = {book.link}
+                        author = {book.volumeInfo.authors[0]}
+                        image = {book.volumeInfo.imageLinks.thumbnail}
+                        link = {book.volumeInfo.infoLink}
+                        description = {book.volumeInfo.description}
                     ></BookDetail>
                 })}
                 </Container>
