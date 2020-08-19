@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Col, Button } from 'react-bootstrap/'
-
+import Render from "react-dom";
+import { Row, Col, Button } from 'react-bootstrap/';
 
 function BookDetail(props) {
 
@@ -42,3 +42,4 @@ export default BookDetail;
 // * `image` - The Book's thumbnail image as returned from the Google Books API
 
 // * `link` - The Book's information link as returned from the Google Books API
+
