@@ -26,6 +26,8 @@ function BookDetail(props) {
                     
                 </Row>
             </Col>
+            <hr></hr>
+            <br></br>
         </div>
         )
 }

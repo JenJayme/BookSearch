@@ -24,12 +24,12 @@ class Search extends React.Component {
     handleClick = id => {
         id.preventDefault();
         console.log(id.target.value)
-        alert(this.state.inputVal)
+        // alert(this.state.inputVal)
         
         API.searchBooks (this.state.inputVal)
         // alert("yes")
             .then(response => {   
-                console.log(response)  
+                // console.log(response)  
                 // alert(response.items)           
                 if (response.data.length === 0) {
                     throw new Error("No results found.");
@@ -38,11 +38,11 @@ class Search extends React.Component {
                     throw new Error(response.data.message);
                   }
                 this.setState({results:response.data.items})
-                alert(this.state.results)
+                // alert(this.state.results)
             })
             .catch(function(error){
                 console.log(error)
-                alert("no")
+                // alert("no")
             })
         }
       
@@ -66,8 +66,6 @@ class Search extends React.Component {
                     ></BookDetail>
                 })}
                 </Container>
-
-                <Results />
 
                 {/* <p>Book Details here</p> */}
             </div>
