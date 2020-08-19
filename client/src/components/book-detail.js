@@ -3,7 +3,6 @@ import Render from "react-dom";
 import { Row, Col, Button } from 'react-bootstrap/';
 
 function BookDetail(props) {
-
     return (
         <div>
             <Col>
