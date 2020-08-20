@@ -29,7 +29,7 @@ class Search extends React.Component {
         API.searchBooks (this.state.inputVal)
         // alert("yes")
             .then(response => {   
-                // console.log(response)  
+                console.log(response)  
                 // alert(response.items)           
                 if (response.data.length === 0) {
                     throw new Error("No results found.");
@@ -63,6 +63,7 @@ class Search extends React.Component {
                         image = {book.volumeInfo.imageLinks.thumbnail}
                         link = {book.volumeInfo.infoLink}
                         description = {book.volumeInfo.description}
+                        id = {book.id}
                     ></BookDetail>
                 })}
                 </Container>

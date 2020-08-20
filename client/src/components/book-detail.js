@@ -22,6 +22,7 @@ function BookDetail(props) {
                     <Col md={10}>
                         <p>{props.description} </p>
                         <p>LINK: {props.link}</p>
+                        <p>id: {props.id}</p>
                     </Col>
                     
                 </Row>
