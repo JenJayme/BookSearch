@@ -12,7 +12,7 @@ function BookDetail(props) {
                     </Col>
                     <Col md={{ span: 4, offset: 4 }}>
                         <Button className="mr-2">View</Button>
-                        <Button>Delete</Button>
+                        <Button>{props.button}</Button>
                     </Col>
                 </Row>
                 <Row>
