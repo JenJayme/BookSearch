@@ -9,6 +9,8 @@ export default {
   searchBooks: function(title){
       return axios.get("https://www.googleapis.com/books/v1/volumes?q="+title);
   },
-
+  saveBook: function(book){
+      return axios.post("/api/books",book)
+  }
   
 }

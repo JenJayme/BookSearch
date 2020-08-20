@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Button } from 'react-bootstrap/';
 // import BookContext from "../utils/BookContext"
+import API from "../utils/API"
 
 function SaveButton(props) {
     // const { results } = useContext(BookContext);
@@ -12,6 +13,18 @@ function SaveButton(props) {
         console.log(allBooks)
         const book = allBooks.filter(book => book.id === index);
         console.log(book);
+        const bookBody ={
+            title :book[0].volumeInfo.title,
+            author : book[0].volumeInfo.authors[0],
+            image : book[0].volumeInfo.imageLinks.thumbnail,
+            link : book[0].volumeInfo.infoLink,
+            description : book[0].volumeInfo.description,
+            id: index
+        }
+        API.saveBook(bookBody).then(()=>{
+            console.log("success")
+            alert("Book Saved");
+        });
     }
     return(
         <Button value = {props.id} onClick = {saveClick}>Save</Button>
