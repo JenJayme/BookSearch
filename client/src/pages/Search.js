@@ -9,6 +9,7 @@ import Container from "react-bootstrap/Container";
 import axios from 'axios';
 import API from "../utils/API"
 import BookDetail from "../components/book-detail"
+import BookContext from "../utils/BookContext"
 
 //pass onChange function from searchBar 
 
@@ -46,17 +47,18 @@ class Search extends React.Component {
             })
         }
       
-    
+   
     render(){
         return (
             <div>
+                {/* <BookContext.provider value= {this.state}> */}
                 <Container>
                     <h3>Search Page</h3>
                 <SearchBar 
                     setValue = {this.setValue}
                     handleClick= {this.handleClick}
                     />
-                {this.state.results.map((book)=>{ 
+                {this.state.results.map((book,index)=>{ 
                     return<BookDetail
                         title = {book.volumeInfo.title}
                         author = {book.volumeInfo.authors[0]}
@@ -64,10 +66,14 @@ class Search extends React.Component {
                         link = {book.volumeInfo.infoLink}
                         description = {book.volumeInfo.description}
                         id = {book.id}
+                        all = {this.state.results}
+                        index = {index}
+                        button = {"Save"}
+                        handle = {this.saveClick}
                     ></BookDetail>
                 })}
                 </Container>
-
+                {/* </BookContext.provider> */}
                 {/* <p>Book Details here</p> */}
             </div>
         )

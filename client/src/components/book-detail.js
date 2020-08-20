@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Render from "react-dom";
 import { Row, Col, Button } from 'react-bootstrap/';
+// import BookContext from "../utils/BookContext"
+import SaveButton from "./saveButton";
 
 function BookDetail(props) {
+    // const { results } = useContext(BookContext);
     return (
         <div>
             <Col>
@@ -12,7 +15,11 @@ function BookDetail(props) {
                     </Col>
                     <Col md={{ span: 4, offset: 4 }}>
                         <Button className="mr-2">View</Button>
-                        <Button>{props.button}</Button>
+                        {/* <Button value = {props.id} onClick = {props.handle}>{props.button}</Button> */}
+                        <SaveButton
+                            id = {props.id}
+                            all = {props.all}
+                        />
                     </Col>
                 </Row>
                 <Row>
