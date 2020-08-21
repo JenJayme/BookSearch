@@ -27,7 +27,6 @@ class SavedPage extends React.Component {
         return (
             <div>
                 <h3>Saved Page</h3>
-                <Results />
                 {this.state.results.map((book, index) => {
                     return (
                         <>
