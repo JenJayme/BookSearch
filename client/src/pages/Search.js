@@ -70,6 +70,7 @@ class Search extends React.Component {
                         index = {index}
                         button = {"Save"}
                         handle = {this.saveClick}
+                        saved
                     ></BookDetail>
                 })}
                 </Container>

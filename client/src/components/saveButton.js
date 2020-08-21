@@ -15,11 +15,10 @@ function SaveButton(props) {
         console.log(book);
         const bookBody ={
             title :book[0].volumeInfo.title,
-            author : book[0].volumeInfo.authors[0],
+            authors : book[0].volumeInfo.authors,
             image : book[0].volumeInfo.imageLinks.thumbnail,
             link : book[0].volumeInfo.infoLink,
             description : book[0].volumeInfo.description,
-            id: index
         }
         API.saveBook(bookBody).then(()=>{
             console.log("success")
