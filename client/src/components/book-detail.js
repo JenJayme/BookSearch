@@ -3,6 +3,7 @@ import Render from "react-dom";
 import { Row, Col, Button } from 'react-bootstrap/';
 // import BookContext from "../utils/BookContext"
 import SaveButton from "./saveButton";
+import DeleteButton from './deleteButton'
 
 function BookDetail(props) {
     // const { results } = useContext(BookContext);
@@ -16,10 +17,11 @@ function BookDetail(props) {
                     <Col md={{ span: 4, offset: 4 }}>
                         <Button className="mr-2">View</Button>
                         {/* <Button value = {props.id} onClick = {props.handle}>{props.button}</Button> */}
-                        <SaveButton
+                        {props.saved ? <SaveButton
                             id = {props.id}
                             all = {props.all}
-                        />
+                        />: null}
+                        {props.deleted ? <DeleteButton bookId={props.id} /> : null}
                     </Col>
                 </Row>
                 <Row>
