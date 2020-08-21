@@ -15,7 +15,7 @@ function BookDetail(props) {
                     <h5>{props.author}</h5>
                     </Col>
                     <Col md={{ span: 4, offset: 4 }}>
-                        <Button className="mr-2">View</Button>
+                        <Button className="mr-2" target = "_blank" href={"https://www.googleapis.com/books/v1/volumes?q="+props.id}>View</Button>
                         {/* <Button value = {props.id} onClick = {props.handle}>{props.button}</Button> */}
                         {props.saved ? <SaveButton
                             id = {props.id}
