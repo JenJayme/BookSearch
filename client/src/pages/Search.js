@@ -30,7 +30,7 @@ class Search extends React.Component {
         API.searchBooks (this.state.inputVal)
         // alert("yes")
             .then(response => {   
-                console.log(response)  
+                console.log(response.data.items)  
                 // alert(response.items)           
                 if (response.data.length === 0) {
                     throw new Error("No results found.");
@@ -59,10 +59,17 @@ class Search extends React.Component {
                     handleClick= {this.handleClick}
                     />
                 {this.state.results.map((book,index)=>{ 
+                    var img;
+                    if (!book.volumeInfo.imageLinks){
+                        img = "#"
+                    }
+                    else{
+                        img = book.volumeInfo.imageLinks.thumbnail
+                    }
                     return<BookDetail
                         title = {book.volumeInfo.title}
                         author = {book.volumeInfo.authors[0]}
-                        image = {book.volumeInfo.imageLinks.thumbnail}
+                        image = {img}
                         link = {book.volumeInfo.infoLink}
                         description = {book.volumeInfo.description}
                         id = {book.id}
