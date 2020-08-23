@@ -60,18 +60,47 @@ class Search extends React.Component {
                     />
                 {this.state.results.map((book,index)=>{ 
                     var img;
+                    var title;
+                    var link;
+                    var description;
+                    var id;
+                    var author;
                     if (!book.volumeInfo.imageLinks){
                         img = "#"
                     }
                     else{
                         img = book.volumeInfo.imageLinks.thumbnail
                     }
+                    if(!book.volumeInfo.title){
+                        title = "Title not found"
+                    }
+                    else{
+                        title = book.volumeInfo.title
+                    }
+                    if (!book.volumeInfo.authors){
+                        author = "No found authors"
+                    }
+                    else {
+                        author = book.volumeInfo.authors[0]
+                    }
+                    if (!book.volumeInfo.infoLink){
+                        link = "No link Found"
+                    }
+                    else {
+                        link = book.volumeInfo.infoLink
+                    }
+                    if (!book.volumeInfo.description){
+                        description = "No description found"
+                    }
+                    else{
+                        description = book.volumeInfo.description
+                    }
                     return<BookDetail
-                        title = {book.volumeInfo.title}
-                        author = {book.volumeInfo.authors[0]}
+                        title = {title}
+                        author = {author}
                         image = {img}
-                        link = {book.volumeInfo.infoLink}
-                        description = {book.volumeInfo.description}
+                        link = {link}
+                        description = {description}
                         id = {book.id}
                         all = {this.state.results}
                         index = {index}
