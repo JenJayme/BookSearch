@@ -1,12 +1,7 @@
 import React from "react";
-import Render from "react-dom";
 
 const BookContext = React.createContext({
-    title: "",
-    authors: "",
-    description: "",
-    image: "",
-    link: "",
+    results: []
 });
 
 export default BookContext;
@@ -20,4 +15,3 @@ export default BookContext;
 // * `image` - The Book's thumbnail image as returned from the Google Books API
 
 // * `link` - The Book's information link as returned from the Google Books API
-
