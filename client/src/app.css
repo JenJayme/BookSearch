@@ -1,4 +1,47 @@
-.bannerImg {
-    /* background-image: url("https://pixabay.com/images/id-4515917/"); */
-    background-color: black !important;
+body {
+    /* height: 100%; */
+    background-color: rosybrown;
 }
+
+
+.heading {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.heroImg {
+    display: block;
+    position: relative;
+    background-image: url('../src/components/book.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-width: 800px;
+    min-height: 15em;
+    min-width: 100em;
+    width: 100%;
+    size: cover;
+    margin: 0;
+    left: 0;
+}
+
+.heroTxt {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .nav {
+    background-color: #894f44;
+    padding-left: 2em;
+    /* background-color: #78624b; */
+    color: #ebe0cf;
+  }
+
+  .nav:active {
+    background-color: rgba(195, 166, 132, .7);
+  }
