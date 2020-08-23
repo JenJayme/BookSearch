@@ -6,6 +6,9 @@ import SavedPage from "./pages/Saved";
 import SearchPage from "./pages/Search";
 import BookContext from "./utils/BookContext";
 import Wrapper from "./components/wrapper";
+import book from "./components/book.jpg";
+import Styles from "./app.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
