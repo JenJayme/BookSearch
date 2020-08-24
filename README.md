@@ -1,70 +1,73 @@
-# Google Books Search: MERN Review
+# React Google Book Search
+![Travis Status](https://img.shields.io/travis/:seyouny/:BookSearch)
+![License](https://img.shields.io/github/license/seyouny/BookSearch)
+<hr>
 
-### Overview
+This app provides a handy React-based platform to keep track of your reading list, with a Search page powered by Google Books API and a Saved Books page supported by MongoDB.  We've used React lifecycle methods to query and display books based on user searches. 
 
-In this class activity, you'll create a new React-based Google Books Search app. This assignment requires you to create React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. You'll also use Node, Express and MongoDB so that users can save books to review or purchase later.
+<hr>
 
+## Contents | Quick Links
+[Getting Started](#start)     |     [Demo](#demo)     |     [Built With](#built)     |     [Authors](#author)     |     [Visuals](#visuals)     |     [Contributing & Tests](Contributing.md)     |     [Contact](#contact)
 
-### Instructions
+<hr>
 
-* This application requires at minimum 2 pages, check out the following mockup images for each page:
+## [Getting Started](#start)
 
-  * [Search](Search.png) - User can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
+### Download the app from Git Hub here:
+* [Repo URL](https://github.com/seyouny/BookSearch)
 
-  * [Saved](Saved.png) - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database.
+### <a id="demo">View a demo:</a> 
+* [Deployed on Heroku](https://dry-coast-13098.herokuapp.com/#demo)
+<hr>
 
-1. Start by using the 01-Ins_Mern example as a base for your application.
+## [Visuals](#visuals)
 
-2. Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
+![Example Gif](./client/public/example.gif)
 
-3. Using mongoose, then create a Book schema.
+<hr>
 
-4. At a minimum, books should have each of the following fields:
+## <a id="built">Built With</a>
+* HTML5 & CSS
+* [Javascript](https://www.javascript.com/)
+* [MySql](https://www.mysql.com/)
+* [MongoDB](https://www.mongodb.com/)
+* [VS Code](https://code.visualstudio.com/)
+* [Node.js](https://nodejs.org/)
+* [NPM](https://www.npmjs.com/)
+* [Express.js](https://expressjs.com/)
+* [Axios](https://www.npmjs.com/package/axios)
+* [Heroku](https://www.heroku.com/)
 
-* `title` - Title of the book from the Google Books API
+<hr>
 
-* `authors` - The books's author(s) as returned from the Google Books API
+## <a id="contact">Questions</a>
+For questions or to discuss collaborations on this or other projects, contact the authors via LinkedIn or GitHub as follows.
 
-* `description` - The book's description as returned from the Google Books API
-
-* `image` - The Book's thumbnail image as returned from the Google Books API
-
-* `link` - The Book's information link as returned from the Google Books API
-
-* Creating `documents` in your `books` collection similar to the following:
-
-    ```js
-    {
-      authors: ["Suzanne Collins"]
-      description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature."
-      image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-      link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
-      title: "The Hunger Games"
-    }
-    ```
-
-5. Create a layout similar to the mockups displayed above. This should be a SPA (Single Page Application) that uses [`react-router-dom`](https://github.com/reactjs/react-router) to navigate, hide and show your React components without changing the route within Express.
-
-* The layout should include at least two React Components for each page `Search` and `Saved`.
-
-* Feel free to try out alternative CSS framework to Bootstrap.
-
-6. Add the following Express routes for your app:
-
-* `/api/books` (get) - Should return all saved books as JSON.
-
-* `/api/books` (post) - Will be used to save a new book to the database.
-
-* `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
-
-* `*` (get) - Will load your single HTML page in `client/build/index.html`. Make sure you have this _after_ all other routes are defined.
-
-* Deploy your application to Heroku once complete. **You must use Create React App** and current versions of React and React-Router-Dom for this assignment.
+## <a id="author">Authors</a>
+**Alex Aguirrebena**<br>
+[linkedin.com/in/alex-aguirrebena-34b567124](https://www.linkedin.com/in/alex-aguirrebena-34b567124)<br>
+[github.com/Anotherarod](https://github.com/Anotherarod)
 
 
-### Hints
+**Seyoung "Stacey" Yoon**<br>
+[linkedin.com/stacey-yoon-bbaa7413a](https://www.linkedin.com/in/seyouny)<br>
+[github/seyouny](https://github.com/seyouny)
 
-* Have a look at [https://developers.google.com/books/docs/v1/getting_started#REST](https://developers.google.com/books/docs/v1/getting_started#REST)
 
-#### Example Endpoint
-* [https://www.googleapis.com/books/v1/volumes?q=coraline](https://www.googleapis.com/books/v1/volumes?q=coraline)
+**Jen Jayme**<br>
+[linkedin.com/jenjayme](https://www.linkedin.com/in/jenjayme)<br>
+[github.com/jenjayme](https://github.com/JenJayme)
+
+**Giovanni Noisy**<br>
+[linkedin.com/giovanni-noisy-04098989](https://www.linkedin.com/in/giovanni-noisy-04098989)<br>
+[github.com/gnoisy](https://github.com/GNoisy)
+
+
+**Royce Williams**<br>
+[linkedin.com/jenjayme](https://www.linkedin.com/in/royce-williams-3334261ab)<br>
+[github.com/RoyceWilliams510](https://github.com/RoyceWilliams510)
+
+
+## Acknowledgements
+* Special thanks to Jerome Chenette, Berkeley Coding Boot Camp and Trilogy for referring this project.
